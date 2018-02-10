@@ -1,5 +1,5 @@
 $(document).ready(function () {
 	$('#login').click(function () {
-		$.post('/login')
+		window.location.href = "/login"
 	})
-})
+});

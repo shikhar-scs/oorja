@@ -6,7 +6,7 @@ const app = express();
 
 const routes = {
 	login: require('./api/login').route
-}
+};
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));

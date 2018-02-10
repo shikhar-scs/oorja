@@ -1,20 +1,30 @@
 const MongoClient = require('mongodb').MongoClient;
-const DataBase = require('../config.json').DB;
+const assert = require('assert');
 
-let users = null;
+// Connection URL
+const url = 'mongodb://localhost:27017';
+// Database Name
+const dbName = 'hackeamDB';
 
-MongoClient.connect(DataBase.URI, function (err,db) {
-	if(err) throw err;
-	console.log("connected");
-	users=db.collection('users');
+let usersCollection = null;
+
+// Use connect method to connect to the server
+MongoClient.connect(url, function(err, client) {
+  assert.equal(null, err);
+  console.log("Connected successfully to server");
+
+  const db = client.db(dbName);
+	usersCollection = db.collection('userCollection');
 });
 
-const user = {
+const users = {
 	
 	createNew: function(user){
 		return new Promise(function(res,rej){
-			users.insertOne(user,function (err,result) {
+			console.log(user);
+			usersCollection.insertOne(user,function (err,result) {
 				if(err) return rej(err);
+				console.log(result);
 				return res(result)
 			})
 		})
@@ -22,7 +32,7 @@ const user = {
 	
 	showAll: function (whereArgs) {
 		return new Promise(function(res,rej){
-			users.find(whereArgs).toArray(function (err,result) {
+			usersCollection.find(whereArgs).toArray(function (err,result) {
 				if(err) return rej(err);
 				res(result)
 			})
@@ -31,7 +41,7 @@ const user = {
 	
 	signInVerify: function (whereArgs) {
 		return new Promise(function (res,rej) {
-			users.findOne(whereArgs, function (err,result) {
+			usersCollection.findOne(whereArgs, function (err,result) {
 				if(err) return rej(err);
 				res(result)
 			})
@@ -50,5 +60,8 @@ const user = {
 	
 };
 
-exports.models={user};
+module.exports.models = {
+  users
+};
+
 
