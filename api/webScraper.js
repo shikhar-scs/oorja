@@ -39,6 +39,22 @@ function callDynamicScraper(url, params, callback) {
     )
 }
 
+router.post('/buzz', (req,res)=>{
+  scraperjs.StaticScraper.create("http://www.cricbuzz.com/")
+    .scrape(function($) {
+      return $(".sml-crd-hdln").map(function() {
+        data = {
+          source: "http:" + this.parent.prev.children[0].children[0].attribs.source,
+          text: $(this).text()
+        };
+        return data;
+      }).get();
+    })
+    .then(function(scrapedDatas) {
+      res.send(scrapedDatas);
+    })
+});
+
 router.post('/imgData', (req,res)=>{
 	let url = req.body.url;
 	let params = req.body.params;
