@@ -55,18 +55,18 @@
 
         <div class="container-login100-form-btn">
 
-          <a href="signUp.html" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
-            Sign Up
-            <i class="fa fa-long-arrow-right m-l-5"></i>
-          </a>
-
-          <!--<div class="wrap-login100-form-btn">
+          <div style="margin-bottom: 20px" class="wrap-login100-form-btn">
             <div class="login100-form-bgbtn"></div>
             <button class="login100-form-btn" id="signIn">
               Sign In
             </button>
-          </div>-->
-          <button id="go">sign in</button>
+          </div>
+          <div class="wrap-login100-form-btn">
+            <div class="login100-form-bgbtn"></div>
+            <button class="login100-form-btn" id="signUp">
+              Register
+            </button>
+          </div>
         </div>
       </form>
     </div>
@@ -92,6 +92,10 @@
 
 
 <script src="../selfJS/signIn.js"></script>
-
+<script>
+  $('#signUp').click(function () {
+    window.location.href = '/HTMLfiles/signUp.html'
+  })
+</script>
 </body>
 </html>
