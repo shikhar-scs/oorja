@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	
-	$('#go').click( function () {
+	$('#signIn').click( function () {
 		let username = $('#username').val();
 		let password = $('#password').val();
 		
@@ -9,7 +9,7 @@ $(document).ready(function () {
 				username: username,
 				password: password
 			}, (data) => {
-				console.log(data);
+				localStorage.setItem('userData', JSON.stringify(data));
 				window.location.href = "../HTMLfiles/dashboard.html";
 			})
 		}
