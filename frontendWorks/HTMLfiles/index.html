@@ -31,11 +31,13 @@
     <![endif]-->
 
     
-
+    
     <div id="header">
+        
         <div class="bg-overlay"></div>
             <div id="menu" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                 <div class="container">
+                    
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -73,7 +75,13 @@
     </div>
     <!-- /#header -->
 
-
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+	    function googleTranslateElementInit() {
+		    new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+	    }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <div id="video" class="cyan-wrapper">
         <div class="container inner">

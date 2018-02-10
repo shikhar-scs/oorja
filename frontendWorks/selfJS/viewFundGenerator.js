@@ -18,8 +18,9 @@ $(function () {
     $('#blogName').text(data.fname + " " + data.lname)
     $('#name').text(data.fname + " " + data.lname)
     $('#modeOfPayment').text(data.mop)
-    $('#lastDate').text(data.mop)
+    $('#lastDate').text(d)
     $('#details').text(data.mop)
+    $('#purpose').text(data.purpose)
     $('#dateFiled').text(d)
     $('#contact').text(data.contactDetails);
   }

@@ -9,7 +9,8 @@ const routes = {
 	form: require('./api/form').route,
 	webScraper: require('./api/webScraper').route,
 	fundGenerator: require('./api/fundGenerator').route,
-	rules: require('./api/rules').route
+	rules: require('./api/rules').route,
+	rules: require('./api/videoClips').route
 };
 
 app.use(bodyParser.json());
@@ -21,6 +22,8 @@ app.use('/login',routes.login);
 app.use('/form',routes.form);
 app.use('/fundGenerator',routes.fundGenerator);
 app.use('/rules',routes.rules);
+app.use('/video',routes.rules);
+
 
 app.get('/',(req,res)=>{
 	res.redirect('/HTMLfiles');

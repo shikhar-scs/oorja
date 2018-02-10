@@ -7,30 +7,30 @@
 
 @font-face {
   font-family: Poppins-Regular;
-  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+  src: url('../fonts/poppins/Poppins-Regular.ttf');
 }
 
 @font-face {
   font-family: Poppins-Medium;
-  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+  src: url('../fonts/poppins/Poppins-Medium.ttf');
 }
 
 @font-face {
   font-family: Poppins-Bold;
-  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+  src: url('../fonts/poppins/Poppins-Bold.ttf');
 }
 
 @font-face {
   font-family: Poppins-SemiBold;
-  src: url('../fonts/poppins/Poppins-SemiBold.ttf'); 
+  src: url('../fonts/poppins/Poppins-SemiBold.ttf');
 }
 
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 
 * {
-	margin: 0px; 
-	padding: 0px; 
+	margin: 0px;
+	padding: 0px;
 	box-sizing: border-box;
 }
 
@@ -178,7 +178,7 @@ iframe {
 }
 
 .container-login100 {
-  width: 100%;  
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -218,11 +218,6 @@ iframe {
   height: 100%;
   top: 0;
   left: 0;
-  background: #e8519e;
-  background: -webkit-linear-gradient(bottom, #e8519e, #c77ff2);
-  background: -o-linear-gradient(bottom, #e8519e, #c77ff2);
-  background: -moz-linear-gradient(bottom, #e8519e, #c77ff2);
-  background: linear-gradient(bottom, #e8519e, #c77ff2);
   opacity: 0.8;
 }
 
@@ -306,11 +301,7 @@ iframe {
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 
-  background: #d5007d;
-  background: -webkit-linear-gradient(45deg, #d5007d, #e53935);
-  background: -o-linear-gradient(45deg, #d5007d, #e53935);
-  background: -moz-linear-gradient(45deg, #d5007d, #e53935);
-  background: linear-gradient(45deg, #d5007d, #e53935);
+
 }
 
 
@@ -395,12 +386,13 @@ iframe {
   position: absolute;
   z-index: -1;
   width: 100%;
+  color: #0b0b0b;
   height: 300%;
-  background: #e8519e;
-  background: -webkit-linear-gradient(top, #e8519e, #c77ff2, #e8519e, #c77ff2);
-  background: -o-linear-gradient(top, #e8519e, #c77ff2, #e8519e, #c77ff2);
-  background: -moz-linear-gradient(top, #e8519e, #c77ff2, #e8519e, #c77ff2);
-  background: linear-gradient(top, #e8519e, #c77ff2, #e8519e, #c77ff2);
+  background: lightblue;
+  background: -webkit-linear-gradient(top, lightblue, #fff, lightblue, #fff);
+  background: -o-linear-gradient(top, lightblue, #fff, lightblue, #fff);
+  background: -moz-linear-gradient(top, lightblue, #fff, lightblue, #fff);
+  background: linear-gradient(top, lightblue, #fff, lightblue, #fff);
   bottom: -100%;
   left: 0;
 
@@ -424,7 +416,7 @@ iframe {
 
   font-family: Poppins-Medium;
   font-size: 16px;
-  color: #fff;
+  color: #000;
   line-height: 1.2;
 }
 

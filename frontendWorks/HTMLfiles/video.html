@@ -21,10 +21,8 @@
   <!--  Paper Dashboard core CSS    -->
   <link href="../assets/css/paper-dashboard.css" rel="stylesheet"/>
   
-  
   <!--  CSS for Demo Purpose, don't include it in your project     -->
   <link href="../assets/css/demo.css" rel="stylesheet" />
-  
   
   <!--  Fonts and icons     -->
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
@@ -62,7 +60,7 @@
             <p>Form</p>
           </a>
         </li>
-        <li class="active">
+        <li>
           <a href="news.html">
             <i class="ti-bell"></i>
             <p>News</p>
@@ -75,8 +73,7 @@
             <p>Fund Generator</p>
           </a>
         </li>
-  
-  
+        
         <li>
           <a href="user.html">
             <i class="ti-user"></i>
@@ -90,7 +87,7 @@
           </a>
         </li>
   
-        <li>
+        <li class="active">
           <a href="video.html">
             <i class="ti-video-camera"></i>
             <p>Training Videos</p>
@@ -103,6 +100,7 @@
             <p>Icons</p>
           </a>
         </li>
+        
         <li>
           <a href="notifications.html">
             <i class="ti-bell"></i>
@@ -123,7 +121,7 @@
             <span class="icon-bar bar2"></span>
             <span class="icon-bar bar3"></span>
           </button>
-          <a class="navbar-brand" id="fetchNews">Fetch News</a>
+          <a class="navbar-brand" href="#">Train Your Self</a>
           <div id="google_translate_element"></div>
           <script type="text/javascript">
 		        function googleTranslateElementInit() {
@@ -167,14 +165,53 @@
         </div>
       </div>
     </nav>
-    <div id="blog" class="light-wrapper">
-      <div class="container inner" id="newsList">
-      
+    
+    
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="header">
+                <h4 class="title">Training Videos</h4>
+                <p class="category">Watch these videos and train yourself</p>
+              </div>
+              <div class="content table-responsive table-full-width" id="videoList">
+              
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- /.container -->
-    </div><!-- #blog -->
-  
-  
+    </div>
+    
+    <footer class="footer">
+      <div class="container-fluid">
+        <nav class="pull-left">
+          <ul>
+            
+            <li>
+              <a href="http://www.creative-tim.com">
+                OORJA
+              </a>
+            </li>
+            <li>
+              <a href="http://blog.creative-tim.com">
+                Blog
+              </a>
+            </li>
+            <li>
+              <a href="http://www.creative-tim.com/license">
+                Licenses
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="copyright pull-right">
+          &copy; <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com">OORJA</a>
+        </div>
+      </div>
+    </footer>
   
   
   </div>
@@ -205,24 +242,6 @@
 <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 <script src="../assets/js/demo.js"></script>
 
-<script src="../selfJS/news.js"></script>
-
-<script type="text/javascript">
-	
-	$(document).ready(function(){
-		
-		demo.initChartist();
-		
-		$.notify({
-			icon: 'ti-gift',
-			message: "Hey Generate Your Resume Now  "
-			
-		},{
-			type: 'success',
-			timer: 4000
-		});
-		
-	});
-</script>
+<script src="../selfJS/videoClips.js"></script>
 
 </html>
