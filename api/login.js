@@ -1,12 +1,12 @@
 const route = require('express').Router();
-const users =require('../mongo/models').models.users;
+const user =require('../mongo/models').models.user;
 
 route.get('/', (req,res) => {
 	res.redirect('/HTMLfiles/signIn.html')
 });
 
 route.get('/signIn', (req,res) => {
-	users.signInVerify({
+	user.signInVerify({
 			username: req.body.username
 		})
 		.then((data) => {
@@ -18,7 +18,7 @@ route.get('/signIn', (req,res) => {
 })
 
 route.get('/signUp', (req,res) => {
-	users.createNew({
+	user.createNew({
 			name: req.body.name,
 			email: req.body.email,
 			username: req.body.username,
@@ -30,6 +30,4 @@ route.get('/signUp', (req,res) => {
 		.catch((err) => console.log(err));
 })
 
-
 module.exports.route = route;
-

@@ -9,7 +9,7 @@ MongoClient.connect(DataBase.URI, function (err,db) {
 	users=db.collection('users');
 });
 
-const users = {
+const user = {
 	
 	createNew: function(user){
 		return new Promise(function(res,rej){
@@ -50,5 +50,5 @@ const users = {
 	
 };
 
-exports.models={users};
+exports.models={user};
 

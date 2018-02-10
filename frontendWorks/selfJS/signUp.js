@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	
 	$('#signUp').click( function () {
-		
+		console.log('sfvdd');
 		let name = $('#name').val;
 		let email = $('#email').val;
 		let username = $('#username').val;
@@ -9,6 +9,7 @@ $(document).ready(function () {
 		let repeatPassword = $('#repeatPassword').val;
 		
 		if( name && email && username && password && (password === repeatPassword)) {
+			console.log('vdfdf')
 			$.post('/login/signUp', {
 				name: name,
 				email: email,
