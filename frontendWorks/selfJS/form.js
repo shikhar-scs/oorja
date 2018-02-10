@@ -1,33 +1,43 @@
 $(document).ready(function () {
-	
+
+	$('#viewResume').click(function () {
+		window.location.href = '/form/resume'
+  });
+
 	$('#submit').click( function () {
-		let fname = $('#fname').val();
-		let lname = $('#lname').val();
+    let fname = $('#fname').val();
+    let lname = $('#lname').val();
     let dob = $('#dob').val();
     let contact = $('#contact').val();
     let gender = $('#gender').val();
     let weight = $('#weight').val();
     let height = $('#height').val();
     let bmi = $('#bmi').val();
+    let bmr = $('#bmr').val();
     let fit = $('#fit').val();
-		let form = $('#form');
+    let form = $('#form').val();
     let achievements = $('#achievements').val();
-		
-		if( fname && lname && gender && achievements) {
-			$.post('/form/', {
-				fname: fname,
-				lname: lname,
-				gender: gender,
-				dob,
-				contact,
-				weight,
-				height,
-				bmi,
-				fit,
-				form,
-				achievements: achievements
+		let formData = {
+			fname,
+      lname,
+      dob,
+			bmr,
+      contact,
+      gender,
+      weight,
+      height,
+    	bmi,
+    	fit,
+    	form,
+			achievements
+		};
+		if( formData ) {
+      console.log(formData);
+      $.post('/form/', {
+				username: JSON.parse(localStorage.getItem('userData')).data.username,
+				formData
 			}, (data) => {
-				console.log(data);
+				console.log('hey',	data);
 			})
 		}
 	})
