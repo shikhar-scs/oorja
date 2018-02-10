@@ -26,7 +26,7 @@ $(document).ready(function () {
 			totalNews[news] = totalNews[news].trim()
 			if(totalNews[news].trim() !== "") {
 				let newsCard = $(`<div class="card" style="margin: 20px;width: 30rem; float: left">
-													<img class="card-img-top" style="width: 100%; height: 100%" src="../img/content-left.jpg" alt="Card image cap">
+												<a href="http://www.ddca.in/" target="_blank"><img class="card-img-top" style="width: 100%; height: 100%" src="../img/ddca.png" alt="Card image cap"></a>
 												<div class="card-body">
 												<p class="card-text" style="padding: 10px">${totalNews[news].trim()}</p>
 											</div>

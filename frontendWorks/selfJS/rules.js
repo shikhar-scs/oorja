@@ -20,11 +20,12 @@ $(document).ready(function () {
 		console.log(totalRules)
 		tableList.innerHTML = $(`<table class="table table-striped">
                   <thead>
+                  <th width="12%">S No.</th>
                   <th>Link</th>
                   </thead>
                   <tbody>`);
-		for(let rule = 0; rule <totalRules.length; rule++) {
-			let tableListItem = $(`<tr><td>1</td></tr>`);
+		for(let rule = 50; rule <totalRules.length; rule++) {
+			let tableListItem = $(`<hr><tr><td width="12%"> &nbsp; &nbsp; &nbsp;${rule-49} &nbsp; &nbsp; &nbsp; </td><td><a href="${totalRules[rule]}">${totalRules[rule].split('/').reverse()[0].split('-').join(' ').split('_').join(' ')}</a></td></tr>`);
 			tableList.append(tableListItem);
 		}
 		tableList.append(`</tbody>
