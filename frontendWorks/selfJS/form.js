@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
-	$('#viewResume').click(function () {
+	$('#viewResume').click(function (e) {
+	  e.preventDefault();
 		window.location.href = '/form/resume'
   });
 
