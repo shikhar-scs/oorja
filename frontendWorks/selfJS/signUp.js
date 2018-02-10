@@ -6,7 +6,6 @@ $(document).ready(function () {
 		let username = $('#username').val();
 		let password = $('#password').val();
 		let repeatPassword = $('#repeatPassword').val();
-		console.log(name, email, username, password, repeatPassword);
 		if( name && email && username && password && (password === repeatPassword)) {
 			$.post('/login/signUp', {
 				name: name,

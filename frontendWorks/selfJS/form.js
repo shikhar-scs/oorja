@@ -4,6 +4,8 @@ $(document).ready(function () {
 		window.location.href = '/form/resume'
   });
 
+  document.getElementById('displayName').innerText = `${JSON.parse(localStorage.getItem('userData')).data.name}`;
+
 	$('#submit').click( function () {
     let fname = $('#fname').val();
     let lname = $('#lname').val();
