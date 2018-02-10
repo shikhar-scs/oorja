@@ -12,7 +12,7 @@ $(document).ready(function () {
 				password: password
 			}, (data) => {
 				console.log(data);
-				window.location.href = "/";
+				window.location.href = "/dashboard.html";
 			})
 		}
 	})
