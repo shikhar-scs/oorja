@@ -7,7 +7,8 @@ const app = express();
 const routes = {
 	login: require('./api/login').route,
 	form: require('./api/form').route,
-	webScraper: require('./api/webScraper').route
+	webScraper: require('./api/webScraper').route,
+	fundGenerator: require('./api/fundGenerator').route
 };
 
 app.use(bodyParser.json());
@@ -17,6 +18,7 @@ app.use('/scraper', routes.webScraper);
 app.use('/',express.static(path.join(__dirname,'frontendWorks')));
 app.use('/login',routes.login);
 app.use('/form',routes.form);
+app.use('/fundGenerator',routes.fundGenerator);
 
 app.get('/',(req,res)=>{
 	res.redirect('/HTMLfiles');

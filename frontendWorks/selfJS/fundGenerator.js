@@ -1,0 +1,33 @@
+$(document).ready(function () {
+	
+	document.getElementById('displayName').innerText = `${JSON.parse(localStorage.getItem('userData')).data.username}`;
+	
+	$('#submit').click(function () {
+		let fname = $('#fname').val();
+		let lname = $('#lname').val();
+		let purpose = $('#purpose').val();
+		let contactDetails = $('#contactDetails').val();
+		let mop = $('#mop').val();
+		
+		$.post('/fundGenerator', {
+			username: JSON.parse(localStorage.getItem('userData')).data.username,
+			fname: fname,
+			lname: lname,
+			purpose: purpose,
+			contactDetails: contactDetails,
+			mop: mop
+		}, (data) => {
+			console.log(data);
+		})
+		
+		$.post('/fundGenerator/getGenerator',{
+			username: JSON.parse(localStorage.getItem('userData')).data.username
+		}, (data) => {
+			generateFinal(data)
+		})
+	})
+	
+	function generateFinal(data) {
+		console.log(data)
+	}
+})

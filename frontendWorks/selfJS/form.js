@@ -19,7 +19,7 @@ $(document).ready(function () {
 				fname: fname,
 				lname: lname,
 				gender: gender,
-				dob,
+				dob: dob,
 				contact,
 				weight,
 				height,
