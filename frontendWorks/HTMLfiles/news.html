@@ -56,13 +56,13 @@
             <p>Dashboard</p>
           </a>
         </li>
-        <li class="active">
+        <li>
           <a href="form.html">
             <i class="ti-notepad"></i>
             <p>Form</p>
           </a>
         </li>
-        <li>
+        <li  class="active">
           <a href="news.html">
             <i class="ti-bell"></i>
             <p>News</p>
@@ -108,7 +108,7 @@
             <span class="icon-bar bar2"></span>
             <span class="icon-bar bar3"></span>
           </button>
-          <a class="navbar-brand" href="#">Generate Your Resume</a>
+          <a class="navbar-brand" id="fetchNews">Fetch News</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -145,49 +145,14 @@
       </div>
     </nav>
     <div id="blog" class="light-wrapper">
-      <div class="container inner">
-        <div class="title">
-          <h2 class="section-title text-center">Generate Your Resume</h2>
-        </div>
+      <div class="container inner" id="newsList">
       
-        <div class="row">
-        
-          <form class="needs-validation" novalidate>
-            <div class="form-row">
-              <div class="col-md-5 mb-3">
-                <label for="fname">First name</label>
-                <input type="text" class="form-control" id="fname" placeholder="First name" required>
-              </div>
-              <div class="col-md-5 mb-3">
-                <label for="lname">Last name</label>
-                <input type="text" class="form-control" id="lname" placeholder="Last name" required>
-              </div>
-            </div>
-            <div class="form-row mb-3">
-              <div class="col-md-5 mb-3">
-                <label for="gender">Gender</label>
-                <input type="text" class="form-control" id="gender" placeholder="Male/Female" required>
-              </div>
-              <div class="col-md-5 mb-3">
-                <label for="achievements">Achievements</label>
-                <input type="text" class="form-control" id="achievements" placeholder="Last name" required>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="col-md-12 mt-3 mb-3">
-                <button type="submit" id="submit" class="col-md-offset-4 col-md-2 mt-5 btn btn-primary">Submit</button>
-              </div>
-            </div>
-        
-          </form>
-        </div>
-        <!-- /.blog -->
       </div>
       <!-- /.container -->
     </div><!-- #blog -->
-    
-    
-    
+  
+  
+  
   
   </div>
 </div>
@@ -217,10 +182,10 @@
 <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 <script src="../assets/js/demo.js"></script>
 
-<script src="../selfJS/form.js"></script>
+<script src="../selfJS/news.js"></script>
 
 <script type="text/javascript">
- 
+	
 	$(document).ready(function(){
 		
 		demo.initChartist();

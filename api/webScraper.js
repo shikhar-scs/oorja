@@ -1,5 +1,18 @@
 const router = require('express').Router();
+
 var scraperjs = require('scraperjs');
+
+function callStaticImg(url, params, callback) {
+	scraperjs.StaticScraper.create(url)
+		.scrape(function($) {
+			return $(`${params}`).map(function() {
+				return $(this).attr('src');
+			}).get();
+		})
+		.then(function(scrapedData) {
+			callback(scrapedData);
+		})
+}
 
 function callStaticScraper(url, params, callback) {
   scraperjs.StaticScraper.create(url)
@@ -26,12 +39,19 @@ function callDynamicScraper(url, params, callback) {
     )
 }
 
+router.post('/imgData', (req,res)=>{
+	let url = req.body.url;
+	let params = req.body.params;
+	callStaticImg(url, params, (scrapedData)=>{
+		res.send(scrapedData);
+	});
+});
 
 router.post('/', (req,res)=>{
+  
   let url = req.body.url;
   let params = req.body.params;
   callStaticScraper(url, params, (scrapedData)=>{
-    console.log(scrapedData);
     res.send(scrapedData);
   });
 });

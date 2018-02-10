@@ -13,7 +13,7 @@ $(document).ready(function () {
 				gender: gender,
 				achievements: achievements
 			}, () => {
-				console.log('gfgdfg')
+				console.log('Sent')
 			})
 		}
 	})

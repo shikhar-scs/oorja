@@ -9,7 +9,6 @@ $(document).ready(function () {
 				username: username,
 				password: password
 			}, (data) => {
-				console.log(data);
 				window.location.href = "../HTMLfiles/dashboard.html";
 			})
 		}

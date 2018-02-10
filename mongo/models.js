@@ -22,10 +22,8 @@ const users = {
 	
 	createNew: function(user){
 		return new Promise(function(res,rej){
-			console.log(user);
 			usersCollection.insertOne(user,function (err,result) {
 				if(err) return rej(err);
-				console.log(result);
 				return res(result)
 			})
 		})
@@ -67,7 +65,6 @@ const formsData = {
 		return new Promise(function(res,rej){
 			formData.insertOne(formdata,function (err,result) {
 				if(err) return rej(err);
-				console.log(result);
 				return res(result)
 			})
 		})
