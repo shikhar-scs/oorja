@@ -24,13 +24,6 @@
   
   <!--  CSS for Demo Purpose, don't include it in your project     -->
   <link href="../assets/css/demo.css" rel="stylesheet" />
-
-  <style>
-    #submit{
-      margin-top: 20px;
-      padding: 10px;
-    }
-  </style>
   
   
   <!--  Fonts and icons     -->
@@ -63,13 +56,13 @@
             <p>Dashboard</p>
           </a>
         </li>
-        <li class="active">
+        <li>
           <a href="form.html">
             <i class="ti-notepad"></i>
             <p>Form</p>
           </a>
         </li>
-        <li>
+        <li  class="active">
           <a href="news.html">
             <i class="ti-bell"></i>
             <p>News</p>
@@ -115,35 +108,35 @@
             <span class="icon-bar bar2"></span>
             <span class="icon-bar bar3"></span>
           </button>
-          <a class="navbar-brand" href="#">Generate Your Resume</a>
+          <a class="navbar-brand" id="fetchNews">Fetch News</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li>
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <!--<i class="ti-panel"></i>-->
-                <!--<p>Stats</p>-->
+                <i class="ti-panel"></i>
+                <p>Stats</p>
               </a>
             </li>
-            <!--<li class="dropdown">-->
-              <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
-                <!--<i class="ti-bell"></i>-->
-                <!--<p class="notification">5</p>-->
-                <!--<p>Notifications</p>-->
-                <!--<b class="caret"></b>-->
-              <!--</a>-->
-              <!--<ul class="dropdown-menu">-->
-                <!--<li><a href="#">Notification 1</a></li>-->
-                <!--<li><a href="#">Notification 2</a></li>-->
-                <!--<li><a href="#">Notification 3</a></li>-->
-                <!--<li><a href="#">Notification 4</a></li>-->
-                <!--<li><a href="#">Another notification</a></li>-->
-              <!--</ul>-->
-            <!--</li>-->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="ti-bell"></i>
+                <p class="notification">5</p>
+                <p>Notifications</p>
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Notification 1</a></li>
+                <li><a href="#">Notification 2</a></li>
+                <li><a href="#">Notification 3</a></li>
+                <li><a href="#">Notification 4</a></li>
+                <li><a href="#">Another notification</a></li>
+              </ul>
+            </li>
             <li>
               <a href="#">
-                  <i class = "ti-user"></i>
-                <p id="displayName"></p>
+                <i class="ti-settings"></i>
+                <p>Settings</p>
               </a>
             </li>
           </ul>
@@ -152,90 +145,14 @@
       </div>
     </nav>
     <div id="blog" class="light-wrapper">
-      <div class="container inner">
-        <div class="title">
-          <h2 class="section-title text-center">Generate Your Resume</h2>
-        </div>
+      <div class="container inner" id="newsList">
       
-        <div class="row">
-        
-          <form class="needs-validation" novalidate>
-            <div class="form-row">
-              <div class="col-md-5 mb-3">
-                <label for="fname">First name</label>
-                <input type="text" class="form-control" id="fname" placeholder="First name" required>
-              </div>
-              <div class="col-md-5 mb-3">
-                <label for="lname">Last name</label>
-                <input type="text" class="form-control" id="lname" placeholder="Last name" required>
-              </div>
-            </div>
-            <div class="form-row mb-3">
-              <div class="col-md-5 mb-3">
-                <label for="dob">DOB</label>
-                <input type="text" class="form-control" id="dob" placeholder="DD/MM/YYYY" required>
-              </div>
-              <div class="col-md-5 mb-3">
-                <label for="contact">Contact No</label>
-                <input type="text" class="form-control" id="contact" placeholder="Contact" required>
-              </div>
-            </div>
-            <div class="form-row mb-3">
-              <div class="col-md-5 mb-3">
-                <label for="gender">Gender</label>
-                <input type="text" class="form-control" id="gender" placeholder="Male/Female" required>
-              </div>
-              <div class="col-md-5 mb-3">
-                <label for="achievements">Achievements</label>
-                <input type="text" class="form-control" id="achievements" placeholder="Achievements" required>
-              </div>
-            </div>
-            <div class="form-row mb-3">
-              <div class="col-md-5 mb-3">
-                <label for="weight">Weight</label>
-                <input type="text" class="form-control" id="weight" placeholder="Weight" required>
-              </div>
-              <div class="col-md-5 mb-3">
-                <label for="height">Height</label>
-                <input type="text" class="form-control" id="height" placeholder="Last name" required>
-              </div>
-            </div>
-            <div class="form-row mb-3">
-              <div class="col-md-5 mb-3">
-                <label for="bmi">BMI</label>
-                <input type="text" class="form-control" id="bmi" placeholder="Body Mass Index" required>
-              </div>
-              <div class="col-md-5 mb-3">
-                <label for="bmr">BMR</label>
-                <input type="text" class="form-control" id="bmr" placeholder="Basal Metabolic Rate" required>
-              </div>
-            </div>
-            <div class="form-row mb-3">
-              <div class="col-md-5 mb-3">
-                <label for="fit">Fitness Index</label>
-                <input type="text" class="form-control" id="fit" placeholder="Fitness Index" required>
-              </div>
-              <div class="col-md-5 mb-3">
-                <label for="form">Form Index</label>
-                <input type="text" class="form-control" id="form" placeholder="Form Index" required>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="col-md-6 mt-3 mb-3">
-                <button type="submit" id="submit" class="col-md-offset-1 col-md-4 mt-5 btn btn-primary">Submit</button>
-                <button type="submit" id="viewResume" class="col-md-4 mt-5 btn btn-secondary">View Resume</button>
-              </div>
-            </div>
-        
-          </form>
-        </div>
-        <!-- /.blog -->
       </div>
       <!-- /.container -->
     </div><!-- #blog -->
-    
-    
-    
+  
+  
+  
   
   </div>
 </div>
@@ -265,10 +182,10 @@
 <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 <script src="../assets/js/demo.js"></script>
 
-<script src="../selfJS/form.js"></script>
+<script src="../selfJS/news.js"></script>
 
 <script type="text/javascript">
- 
+	
 	$(document).ready(function(){
 		
 		demo.initChartist();
