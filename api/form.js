@@ -7,7 +7,6 @@ route.get('/', (req,res) => {
 });
 
 route.post('/', (req,res) => {
-	console.log('hittong');
 	formdata.createNew({
 			username: req.body.username
 		})
