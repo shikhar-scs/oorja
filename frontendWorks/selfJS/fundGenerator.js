@@ -1,7 +1,12 @@
 $(document).ready(function () {
 	
 	document.getElementById('displayName').innerText = `${JSON.parse(localStorage.getItem('userData')).data.username}`;
-	
+
+  $('#viewFund').click(function (e) {
+    e.preventDefault();
+    window.location.href = '/HTMLfiles/viewFundGenerator.html'
+  });
+
 	$('#submit').click(function () {
 		let fname = $('#fname').val();
 		let lname = $('#lname').val();
