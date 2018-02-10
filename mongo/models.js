@@ -73,7 +73,7 @@ const formsData = {
 	
 	findOne: function (whereArgs) {
 		return new Promise(function (res,rej) {
-			usersCollection.findOne(whereArgs, function (err,result) {
+			formData.findOne(whereArgs, function (err,result) {
 				if(err) return rej(err);
 				res(result)
 			})
