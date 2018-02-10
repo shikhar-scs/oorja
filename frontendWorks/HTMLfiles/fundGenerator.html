@@ -51,7 +51,7 @@
     
     <div class="sidebar-wrapper">
       <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text">
+        <a href="/" class="simple-text">
           OORJA
         </a>
       </div>
@@ -272,5 +272,8 @@
 		});
 		
 	});
+</script>
+<script>
+  $('#displayName').text(JSON.parse(localStorage.getItem('userData')).data.name);
 </script>
 </html>

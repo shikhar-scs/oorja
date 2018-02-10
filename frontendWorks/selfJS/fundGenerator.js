@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	
-	document.getElementById('displayName').innerText = `${JSON.parse(localStorage.getItem('userData')).data.username}`;
+	document.getElementById('displayName').innerText = `${JSON.parse(localStorage.getItem('userData')).data.name}`;
 
   $('#viewFund').click(function (e) {
     e.preventDefault();

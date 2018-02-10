@@ -6,7 +6,7 @@
   <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   
-  <title>Paper Dashboard by OORJA</title>
+  <title>News</title>
   
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
   <meta name="viewport" content="width=device-width" />
@@ -44,7 +44,7 @@
     
     <div class="sidebar-wrapper">
       <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text">
+        <a href="/" class="simple-text">
           OORJA
         </a>
       </div>
@@ -105,8 +105,8 @@
         </li>
         <li>
           <a href="notifications.html">
-            <i class="ti-bell"></i>
-            <p>Notifications</p>
+            <!--<i class="ti-bell"></i>
+            <p>Notifications</p>-->
           </a>
         </li>
       </ul>
@@ -137,11 +137,11 @@
           <ul class="nav navbar-nav navbar-right">
             <li>
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="ti-panel"></i>
-                <p>Stats</p>
+                <!--<i class="ti-panel"></i>
+                <p>Stats</p>-->
               </a>
             </li>
-            <li class="dropdown">
+           <!-- <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <i class="ti-bell"></i>
                 <p class="notification">5</p>
@@ -155,11 +155,11 @@
                 <li><a href="#">Notification 4</a></li>
                 <li><a href="#">Another notification</a></li>
               </ul>
-            </li>
+            </li>-->
             <li>
               <a href="#">
-                <i class="ti-settings"></i>
-                <p>Settings</p>
+                <i class="ti-user"></i>
+                <p id="displayName">Settings</p>
               </a>
             </li>
           </ul>
@@ -168,11 +168,16 @@
       </div>
     </nav>
     <div id="blog" class="light-wrapper">
+      <div style="font-weight:bold;font-size:23px;position: relative;top:40px;margin-bottom: 40px" class="text-center">DDCA</div>
+      <br>
       <div class="container inner" id="newsList">
-      
       </div>
+      <div style="font-weight:bold;font-size:23px;position: relative;top:40px;margin-bottom: 40px" class="text-center">International News</div>
+        <br>
+        <div class="container inner" id="newsListCrickbuzz">
+        </div>
       <!-- /.container -->
-    </div><!-- #blog -->
+    ><!-- #blog -->
   
   
   
@@ -224,5 +229,7 @@
 		
 	});
 </script>
-
+<script>
+  $('#displayName').text(JSON.parse(localStorage.getItem('userData')).data.name);
+</script>
 </html>
