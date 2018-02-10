@@ -19,6 +19,8 @@
   "homepage": "https://github.com/shikhar-scs/hckm#readme",
   "dependencies": {
     "express": "^4.16.2",
-    "mongodb": "^2.2.33"
+    "mongodb": "^2.2.33",
+    "phantomjs": "^2.1.7",
+    "scraperjs": "^1.2.0"
   }
 }

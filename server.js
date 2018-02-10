@@ -5,12 +5,14 @@ const path = require('path');
 const app = express();
 
 const routes = {
-	login: require('./api/login').route
+	login: require('./api/login').route,
+	webScraper: require('./api/webScraper').route
 };
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use('/login',routes.login);
+app.use('/scraper', routes.webScraper);
 app.use('/',express.static(path.join(__dirname,'frontendWorks')));
 
 app.get('/',(req,res)=>{
