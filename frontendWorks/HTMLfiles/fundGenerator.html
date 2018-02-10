@@ -24,7 +24,7 @@
   
   <!--  CSS for Demo Purpose, don't include it in your project     -->
   <link href="../assets/css/demo.css" rel="stylesheet" />
-
+  
   <style>
     #submit{
       margin-top: 20px;
@@ -63,7 +63,7 @@
             <p>Dashboard</p>
           </a>
         </li>
-        <li class="active">
+        <li>
           <a href="form.html">
             <i class="ti-notepad"></i>
             <p>Form</p>
@@ -75,14 +75,14 @@
             <p>News</p>
           </a>
         </li>
-        <li>
+  
+        <li class="active">
           <a href="fundGenerator.html">
             <i class="ti-money"></i>
             <p>Fund Generator</p>
           </a>
         </li>
-  
-  
+        
         <li>
           <a href="user.html">
             <i class="ti-user"></i>
@@ -121,7 +121,7 @@
             <span class="icon-bar bar2"></span>
             <span class="icon-bar bar3"></span>
           </button>
-          <a class="navbar-brand" href="#">Generate Your Resume</a>
+          <a class="navbar-brand" href="#">Generate A Fund Collector Page</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -132,23 +132,23 @@
               </a>
             </li>
             <!--<li class="dropdown">-->
-              <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
-                <!--<i class="ti-bell"></i>-->
-                <!--<p class="notification">5</p>-->
-                <!--<p>Notifications</p>-->
-                <!--<b class="caret"></b>-->
-              <!--</a>-->
-              <!--<ul class="dropdown-menu">-->
-                <!--<li><a href="#">Notification 1</a></li>-->
-                <!--<li><a href="#">Notification 2</a></li>-->
-                <!--<li><a href="#">Notification 3</a></li>-->
-                <!--<li><a href="#">Notification 4</a></li>-->
-                <!--<li><a href="#">Another notification</a></li>-->
-              <!--</ul>-->
+            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+            <!--<i class="ti-bell"></i>-->
+            <!--<p class="notification">5</p>-->
+            <!--<p>Notifications</p>-->
+            <!--<b class="caret"></b>-->
+            <!--</a>-->
+            <!--<ul class="dropdown-menu">-->
+            <!--<li><a href="#">Notification 1</a></li>-->
+            <!--<li><a href="#">Notification 2</a></li>-->
+            <!--<li><a href="#">Notification 3</a></li>-->
+            <!--<li><a href="#">Notification 4</a></li>-->
+            <!--<li><a href="#">Another notification</a></li>-->
+            <!--</ul>-->
             <!--</li>-->
             <li>
               <a href="#">
-                  <i class = "ti-user"></i>
+                <i class = "ti-user"></i>
                 <p id="displayName"></p>
               </a>
             </li>
@@ -160,11 +160,11 @@
     <div id="blog" class="light-wrapper">
       <div class="container inner">
         <div class="title">
-          <h2 class="section-title text-center">Generate Your Resume</h2>
+          <h2 class="section-title text-center">Generate A Fund Collector Page</h2>
         </div>
-      
-        <div class="row">
         
+        <div class="row">
+          
           <form class="needs-validation" novalidate>
             <div class="form-row">
               <div class="col-md-5 mb-3">
@@ -176,72 +176,39 @@
                 <input type="text" class="form-control" id="lname" placeholder="Last name" required>
               </div>
             </div>
+            
             <div class="form-row mb-3">
               <div class="col-md-5 mb-3">
-                <label for="dob">DOB</label>
-                <input type="text" class="form-control" id="dob" placeholder="DD/MM/YYYY" required>
+                <label for="contactDetails">Contact Details</label>
+                <input type="text" height="100" class="form-control" id="contactDetails" placeholder="contact" required>
               </div>
-              <div class="col-md-5 mb-3">
-                <label for="contact">Contact No</label>
-                <input type="text" class="form-control" id="contact" placeholder="Contact" required>
+              <div class="col-md-5 mb-3" >
+                <label for="mop">Preferred Mode Of Payment</label>
+                <input type="text" class="form-control" id="mop" placeholder="Mode of Payment" required>
               </div>
             </div>
             <div class="form-row mb-3">
-              <div class="col-md-5 mb-3">
-                <label for="gender">Gender</label>
-                <input type="text" class="form-control" id="gender" placeholder="Male/Female" required>
-              </div>
-              <div class="col-md-5 mb-3">
-                <label for="achievements">Achievements</label>
-                <input type="text" class="form-control" id="achievements" placeholder="Achievements" required>
+              <div class="col-md-10 mb-3" >
+                <label for="purpose">Purpose</label>
+                <input type="text" class="form-control" id="purpose" placeholder="State The Entire Purpose" required>
               </div>
             </div>
-            <div class="form-row mb-3">
-              <div class="col-md-5 mb-3">
-                <label for="weight">Weight</label>
-                <input type="text" class="form-control" id="weight" placeholder="Weight" required>
-              </div>
-              <div class="col-md-5 mb-3">
-                <label for="height">Height</label>
-                <input type="text" class="form-control" id="height" placeholder="Last name" required>
-              </div>
-            </div>
-            <div class="form-row mb-3">
-              <div class="col-md-5 mb-3">
-                <label for="bmi">BMI</label>
-                <input type="text" class="form-control" id="bmi" placeholder="Body Mass Index" required>
-              </div>
-              <div class="col-md-5 mb-3">
-                <label for="bmr">BMR</label>
-                <input type="text" class="form-control" id="bmr" placeholder="Basal Metabolic Rate" required>
-              </div>
-            </div>
-            <div class="form-row mb-3">
-              <div class="col-md-5 mb-3">
-                <label for="fit">Fitness Index</label>
-                <input type="text" class="form-control" id="fit" placeholder="Fitness Index" required>
-              </div>
-              <div class="col-md-5 mb-3">
-                <label for="form">Form Index</label>
-                <input type="text" class="form-control" id="form" placeholder="Form Index" required>
-              </div>
-            </div>
+            
             <div class="form-row">
               <div class="col-md-6 mt-3 mb-3">
-                <button type="submit" id="submit" class="col-md-offset-1 col-md-4 mt-5 btn btn-primary">Submit</button>
-                <button type="submit" id="viewResume" class="col-md-4 mt-5 btn btn-secondary">View Resume</button>
+                <button type="submit" id="submit" class="col-md-offset-8 col-md-4 mt-5 btn btn-primary">Submit</button>
               </div>
             </div>
-        
+          
           </form>
         </div>
         <!-- /.blog -->
       </div>
       <!-- /.container -->
     </div><!-- #blog -->
-    
-    
-    
+  
+  
+  
   
   </div>
 </div>
@@ -274,14 +241,14 @@
 <script src="../selfJS/form.js"></script>
 
 <script type="text/javascript">
- 
+	
 	$(document).ready(function(){
 		
 		demo.initChartist();
 		
 		$.notify({
 			icon: 'ti-gift',
-			message: "Hey Generate Your Resume Now  "
+			message: "Hey Generate A Fund Collector Page Now  "
 			
 		},{
 			type: 'success',

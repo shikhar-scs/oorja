@@ -19,6 +19,7 @@ $(document).ready(function () {
     let fit = $('#fit').val();
     let form = $('#form').val();
     let achievements = $('#achievements').val();
+
 		let formData = {
 			fname,
       lname,

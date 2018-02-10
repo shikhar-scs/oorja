@@ -6,7 +6,7 @@ const url = 'mongodb://localhost:27017';
 // Database Name
 const dbName = 'HackeamDB';
 
-let usersCollection,formData = null;
+let usersCollection,formData,fundGenerator = null;
 
 // Use connect method to connect to the server
 MongoClient.connect(url, function(err, client) {
@@ -16,6 +16,7 @@ MongoClient.connect(url, function(err, client) {
   const db = client.db(dbName);
 	usersCollection = db.collection('userCollection');
 	formData = db.collection('formData');
+	fundGenerator = db.collection('fundGenerator')
 });
 
 const users = {
@@ -80,8 +81,29 @@ const formsData = {
 	}
 }
 
+const fundsGenerator = {
+	
+	createNew: function(formdata){
+		return new Promise(function(res,rej){
+			fundGenerator.insertOne(formdata,function (err,result) {
+				if(err) return rej(err);
+				return res(result)
+			})
+		})
+	},
+	
+	findOne: function (whereArgs) {
+		return new Promise(function (res,rej) {
+			fundGenerator.findOne(whereArgs, function (err,result) {
+				if(err) return rej(err);
+				res(result)
+			})
+		})
+	}
+}
+
 module.exports.models = {
-  users,formsData
+  users,formsData,fundsGenerator
 };
 
 
