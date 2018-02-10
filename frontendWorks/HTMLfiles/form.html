@@ -1,145 +1,243 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Pilates</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+  <title>Paper Dashboard by Creative Tim</title>
   
-  
-  
-  <link href='http://fonts.googleapis.com/css?family=Kreon:300,400,700' rel='stylesheet' type='text/css'>
-  
-  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width" />
   
   
-  <link href="../css/ionicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../css/main.css">
+  <!-- Bootstrap core CSS     -->
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
   
-  <script src="../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  <!-- Animation library for notifications   -->
+  <link href="../assets/css/animate.min.css" rel="stylesheet"/>
+  
+  <!--  Paper Dashboard core CSS    -->
+  <link href="../assets/css/paper-dashboard.css" rel="stylesheet"/>
+  
+  
+  <!--  CSS for Demo Purpose, don't include it in your project     -->
+  <link href="../assets/css/demo.css" rel="stylesheet" />
+  
+  
+  <!--  Fonts and icons     -->
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+  <link href="../assets/css/themify-icons.css" rel="stylesheet">
+
 </head>
-<body data-spy="scroll" data-target="#navbar" data-offset="120" >
-<!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
+<body>
 
-
-
-<div id="header">
-  <div id="menu" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <i class="ion-navicon"></i>
-        </button>
-        <a class="navbar-brand" href="#"><h2>PilatEs</h2></a>
-      </div><!-- navbar-header -->
-      <div id="navbar" class="navbar-collapse collapse">
-        
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#header">Home</a></li>
-          <li><a href="#video">Video</a></li>
-          <li><a href="#story">Story</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#footer">Footer</a></li>
-          <li><a id="login">Login</a></li>
-        </ul>
-      </div><!--/.navbar-collapse -->
-    </div><!-- container -->
-  </div><!-- menu -->
-</div>
-<!-- /#header -->
-<div id="blog" class="light-wrapper">
-  <div class="container inner">
-    <div class="title">
-      <h2 class="section-title text-center">Generate Your Resume</h2>
-    </div>
+<div class="wrapper">
+  <div class="sidebar" data-background-color="white" data-active-color="danger">
     
-    <div class="row">
+    <!--
+		Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
+		Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
+	-->
+    
+    <div class="sidebar-wrapper">
+      <div class="logo">
+        <a href="http://www.creative-tim.com" class="simple-text">
+          Creative Tim
+        </a>
+      </div>
+      
+      <ul class="nav">
+        <li class="active">
+          <a href="dashboard.html">
+            <i class="ti-panel"></i>
+            <p>Dashboard</p>
+          </a>
+        </li>
+        <li>
+          <a href="user.html">
+            <i class="ti-user"></i>
+            <p>User Profile</p>
+          </a>
+        </li>
+        <li>
+          <a href="table.html">
+            <i class="ti-view-list-alt"></i>
+            <p>Table List</p>
+          </a>
+        </li>
+        <li>
+          <a href="typography.html">
+            <i class="ti-text"></i>
+            <p>Typography</p>
+          </a>
+        </li>
+        <li>
+          <a href="icons.html">
+            <i class="ti-pencil-alt2"></i>
+            <p>Icons</p>
+          </a>
+        </li>
+        <li>
+          <a href="maps.html">
+            <i class="ti-map"></i>
+            <p>Maps</p>
+          </a>
+        </li>
+        <li>
+          <a href="notifications.html">
+            <i class="ti-bell"></i>
+            <p>Notifications</p>
+          </a>
+        </li>
+        <li class="active-pro">
+          <a href="upgrade.html">
+            <i class="ti-export"></i>
+            <p>Upgrade to PRO</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
   
-      <form class="needs-validation" novalidate>
-        <div class="form-row">
-          <div class="col-md-6 mb-3">
-            <label for="fname">First name</label>
-            <input type="text" class="form-control" id="fname" placeholder="First name" required>
-          </div>
-          <div class="col-md-6 mb-3">
-            <label for="lname">Last name</label>
-            <input type="text" class="form-control" id="lname" placeholder="Last name" required>
-          </div>
+  <div class="main-panel">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar bar1"></span>
+            <span class="icon-bar bar2"></span>
+            <span class="icon-bar bar3"></span>
+          </button>
+          <a class="navbar-brand" href="#">Generate Your Resume</a>
         </div>
-        <div class="form-row mb-3">
-          <div class="col-md-6 mb-3">
-            <label for="gender">Gender</label>
-            <input type="text" class="form-control" id="gender" placeholder="Male/Female" required>
-          </div>
-          <div class="col-md-6 mb-3">
-            <label for="achievements">Achievements</label>
-            <input type="text" class="form-control" id="achievements" placeholder="Last name" required>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-md-12 mt-3 mb-3">
-            <button type="submit" id="submit" style="width:100%;" class="m-5 btn btn-primary">Submit</button>
-          </div>
-        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="ti-panel"></i>
+                <p>Stats</p>
+              </a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="ti-bell"></i>
+                <p class="notification">5</p>
+                <p>Notifications</p>
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Notification 1</a></li>
+                <li><a href="#">Notification 2</a></li>
+                <li><a href="#">Notification 3</a></li>
+                <li><a href="#">Notification 4</a></li>
+                <li><a href="#">Another notification</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <i class="ti-settings"></i>
+                <p>Settings</p>
+              </a>
+            </li>
+          </ul>
         
-      </form>
-    </div>
-    <!-- /.blog -->
-  </div>
-  <!-- /.container -->
-</div><!-- #blog -->
-
-
-<footer id="footer" class="dark-wrapper">
-  <div class="container inner">
-    <div class="row">
-      <div class="col-sm-4">
-        &copy; Copyright Pilates 2014
-        <br/>Theme By <a class="themeBy" href="http://www.Themewagon.com">ThemeWagon</a>
-      </div>
-      <div class="col-sm-4">
-        <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms and Conditions</a></li>
-          <li><a href="#">Lorem Ipsum</a></li>
-        </ul>
-      </div>
-      <div class="col-sm-4">
-        <div class="social-bar">
-          <a href="#" data-toggle="tooltip" class="ion-social-twitter tooltipped" title="Twitter"></a>
-          <a href="#" data-toggle="tooltip" class="ion-social-youtube tooltipped" title="Youtube"></a>
-          <a href="#" data-toggle="tooltip" class="ion-social-vimeo tooltipped" title="Vimeo"></a>
-          <a href="#" data-toggle="tooltip" class="ion-social-facebook tooltipped" title="Facebook"></a>
-          <a href="#" data-toggle="tooltip" class="ion-social-pinterest tooltipped" title="Pinterest"></a>
-          <a href="#" data-toggle="tooltip" class="ion-social-googleplus tooltipped" title="Google-Plus"></a>
         </div>
       </div>
-    </div>
+    </nav>
+    <div id="blog" class="light-wrapper">
+      <div class="container inner">
+        <div class="title">
+          <h2 class="section-title text-center">Generate Your Resume</h2>
+        </div>
+      
+        <div class="row">
+        
+          <form class="needs-validation" novalidate>
+            <div class="form-row">
+              <div class="col-md-5 mb-3">
+                <label for="fname">First name</label>
+                <input type="text" class="form-control" id="fname" placeholder="First name" required>
+              </div>
+              <div class="col-md-5 mb-3">
+                <label for="lname">Last name</label>
+                <input type="text" class="form-control" id="lname" placeholder="Last name" required>
+              </div>
+            </div>
+            <div class="form-row mb-3">
+              <div class="col-md-5 mb-3">
+                <label for="gender">Gender</label>
+                <input type="text" class="form-control" id="gender" placeholder="Male/Female" required>
+              </div>
+              <div class="col-md-5 mb-3">
+                <label for="achievements">Achievements</label>
+                <input type="text" class="form-control" id="achievements" placeholder="Last name" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-12 mt-3 mb-3">
+                <button type="submit" id="submit" class="col-md-offset-4 col-md-2 mt-5 btn btn-primary">Submit</button>
+              </div>
+            </div>
+        
+          </form>
+        </div>
+        <!-- /.blog -->
+      </div>
+      <!-- /.container -->
+    </div><!-- #blog -->
+    
+    
+    
+  
   </div>
-  <!-- /.container -->
-</footer>
+</div>
 
-
-<script src="../js/jquery-2.1.3.min.js"></script>
-<script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-
-<script src="../js/jquery.actual.min.js"></script>
-<script src="../js/jquery.scrollTo.min.js"></script>
-<script src="../js/vendor/bootstrap.min.js"></script>
-
-<script src="../js/main.js"></script>
-<script src="../selfJS/form.js"></script>
 
 </body>
-</html>
 
+<!--   Core JS Files   -->
+<script src="../assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!--  Checkbox, Radio & Switch Plugins -->
+<script src="../assets/js/bootstrap-checkbox-radio.js"></script>
+
+<!--  Charts Plugin -->
+<script src="../assets/js/chartist.min.js"></script>
+
+<!--  Notifications Plugin    -->
+<script src="../assets/js/bootstrap-notify.js"></script>
+
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+<!-- Paper Dashboard Core javascript and methods for Demo purpose -->
+<script src="../assets/js/paper-dashboard.js"></script>
+
+<!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+<script src="../assets/js/demo.js"></script>
+
+<script src="../selfJS/form.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		demo.initChartist();
+		
+		$.notify({
+			icon: 'ti-gift',
+			message: "Hey Generate Your Resume Now  "
+			
+		},{
+			type: 'success',
+			timer: 4000
+		});
+		
+	});
+</script>
+
+</html>

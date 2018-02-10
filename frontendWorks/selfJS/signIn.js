@@ -10,7 +10,7 @@ $(document).ready(function () {
 				password: password
 			}, (data) => {
 				console.log(data);
-				window.location.href = "/dashboard.html";
+				window.location.href = "../HTMLfiles/dashboard.html";
 			})
 		}
 	})
