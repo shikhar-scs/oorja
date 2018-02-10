@@ -1,6 +1,8 @@
 $(document).ready(function () {
-	
-	$('#submit').click( function () {
+
+    document.getElementById('displayName').innerText = `${JSON.parse(localStorage.getItem('userData')).data.name}`;
+
+    $('#submit').click( function () {
 		let fname = $('#fname').val();
 		let lname = $('#lname').val();
     let dob = $('#dob').val();
@@ -12,7 +14,6 @@ $(document).ready(function () {
     let fit = $('#fit').val();
 		let form = $('#form');
     let achievements = $('#achievements').val();
-		
 		if( fname && lname && gender && achievements) {
 			$.post('/form/', {
 				fname: fname,
