@@ -154,3 +154,6 @@ function debounce(func, wait, immediate) {
 		if (immediate && !timeout) func.apply(context, args);
 	};
 };
+
+document.getElementById('displayName').innerText = `${JSON.parse(localStorage.getItem('userData')).data.name}`;
+
