@@ -1,9 +1,9 @@
 const route = require('express').Router();
-
+const path = require('path');
 const user =require('../mongo/models').models.users;
 
 route.get('/', (req,res) => {
-	res.sendFile('/home/soumya/Team Projects/HackEam/hckm/frontendWorks/HTMLfiles/signIn.html');
+	res.sendFile(path.join(__dirname,'../frontendWorks/HTMLfiles/signIn.html'));
 });
 
 route.post('/test', (req,res)=> {
