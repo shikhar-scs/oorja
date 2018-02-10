@@ -11,18 +11,16 @@ route.post('/test', (req,res)=> {
 });
 
 route.post('/signIn', (req,res) => {
-	console.log('hey');
-  res.redirect('/HTMLfiles');
   user.signInVerify({
 			username: req.body.username
 		})
 		.then((data) => {
       if (data.password === req.body.password) {
-				console.log('hoho');
+				res.send({data: data})
 			}
 		})
 		.catch((err) => console.log(err))
-})
+});
 
 route.post('/signUp', (req,res) => {
 	user.createNew({

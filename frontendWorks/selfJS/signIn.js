@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	
-	$('#signIn').click( function () {
+	$('#go').click( function () {
 		console.log('as');
 		let username = $('#username').val();
 		let password = $('#password').val();
@@ -10,9 +10,10 @@ $(document).ready(function () {
 			$.post('/login/signIn', {
 				username: username,
 				password: password
-			}, () => {
-				console.log('Data Sent for SignIn')
+			}, (data) => {
+				console.log(data);
+				window.location.href = "/";
 			})
 		}
 	})
-})
+});
