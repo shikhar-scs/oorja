@@ -7,13 +7,14 @@ $(document).ready(function () {
 		let achievements = $('#achievements').val();
 		
 		if( fname && lname && gender && achievements) {
+			console.log('heello');
 			$.post('/form/', {
 				fname: fname,
 				lname: lname,
 				gender: gender,
 				achievements: achievements
-			}, () => {
-				console.log('gfgdfg')
+			}, (data) => {
+				console.log(data);
 			})
 		}
 	})

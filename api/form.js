@@ -1,11 +1,13 @@
 const route = require('express').Router();
+const path = require('path');
 const formdata =require('../mongo/models').models.formsData;
 
 route.get('/', (req,res) => {
-	res.sendFile('/home/shikhar/Desktop/work/HACKEAM/hckm/hckm/frontendWorks/HTMLfiles/form.html');
+	res.sendFile(path.join(__dirname,'../frontendWorks/HTMLfiles/form.html'));
 });
 
 route.post('/', (req,res) => {
+	console.log('hittong');
 	formdata.createNew({
 			username: req.body.username
 		})
