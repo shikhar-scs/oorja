@@ -6,10 +6,6 @@ route.get('/', (req,res) => {
 	res.sendFile(path.join(__dirname,'../frontendWorks/HTMLfiles/signIn.html'));
 });
 
-route.post('/test', (req,res)=> {
-	res.redirect('/');
-});
-
 route.post('/signIn', (req,res) => {
   user.signInVerify({
 			username: req.body.username
