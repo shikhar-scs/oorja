@@ -8,6 +8,10 @@ $(document).ready(function () {
 		}
 	)
 	
+	
+	$('#pdf').click( function () {
+		window.print()
+	})
 	function makeResume(data) {
 		data = data.data;
 		$('#name').text(data.fname + " " + data.lname );
