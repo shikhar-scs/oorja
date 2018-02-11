@@ -8,6 +8,7 @@ $(document).ready(function () {
   });
 
 	$('#submit').click(function () {
+		let money = $('#money').val();
 		let fname = $('#fname').val();
 		let lname = $('#lname').val();
 		let purpose = $('#purpose').val();
@@ -19,6 +20,7 @@ $(document).ready(function () {
 			fname: fname,
 			lname: lname,
 			purpose: purpose,
+			money: money,
 			contactDetails: contactDetails,
 			mop: mop
 		}, (data) => {

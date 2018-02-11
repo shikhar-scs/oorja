@@ -22,6 +22,7 @@ $(function () {
     $('#details').text(data.mop)
     $('#purpose').text(data.purpose)
     $('#dateFiled').text(d)
+    $('#money').text("₹" + data.money)
     $('#contact').text(data.contactDetails);
   }
 });

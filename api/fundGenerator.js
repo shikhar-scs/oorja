@@ -10,6 +10,7 @@ route.post('/', (req,res) => {
 	fundGenerator.createNew({
 		username: req.body.username,
 		fname: req.body.fname,
+		money: req.body.money,
 		lname: req.body.lname,
 		purpose: req.body.purpose,
 		contactDetails: req.body.contactDetails,
