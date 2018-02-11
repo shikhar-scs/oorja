@@ -17,7 +17,8 @@ $(document).ready(function () {
 	let videoList = $('#videoList');
 	
 	function displayVideos(totalVideos) {
-		console.log(totalVideos)
+		$('#videoList').hide();
+		$('#preLOADER').show();
 		for(let video = 0; video <totalVideos.length; video++) {
 			if ( video === 5) continue
 			let card = $(`<div class="card" style="margin: 20px;width: 44rem; float: left">
@@ -25,6 +26,10 @@ $(document).ready(function () {
 												
 											</div>`);
 			videoList.append(card);
+			if (video === totalVideos.length -1) {
+        $('#videoList').show();
+        $('#preLOADER').hide();
+			}
 		}
 		videoList.append(`</tbody>
                 </table>
