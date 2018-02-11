@@ -3,9 +3,9 @@ const assert = require('assert');
 const database = require('../config').DB;
 
 // Connection URL
-/*const url = 'mongodb://localhost:27017';
+// const url = 'mongodb://localhost:27017';
 // Database Name
-const dbName = 'HackeamDB';*/
+// const dbName = 'HackeamDB';
 
 let usersCollection,formData,fundGenerator = null;
 
@@ -14,7 +14,7 @@ MongoClient.connect(database.mlabURI, function(err, client) {
   assert.equal(null, err);
   console.log("Connected successfully to server");
 
-  const db = client.db(dbName);
+  const db = client.db('hackeamdb');
 	usersCollection = db.collection('userCollection');
 	formData = db.collection('formData');
 	fundGenerator = db.collection('fundGenerator')
