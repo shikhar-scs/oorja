@@ -127,7 +127,8 @@
 	<script src="../selfJS/signUp.js"></script>
 
 <script>
-	$('#signIn').click(function () {
+	$('#signIn').click(function (e) {
+	  e.preventDefault();
 		window.location.href = '/login'
   });
 </script>
