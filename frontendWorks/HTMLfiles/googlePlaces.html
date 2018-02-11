@@ -28,6 +28,66 @@
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
   <link href="../assets/css/themify-icons.css" rel="stylesheet">
+  
+  <style>
+    /* Always set the map height explicitly to define the size of the div
+     * element that contains the map. */
+    #map {
+      height: 100%;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <script>
+		// This example requires the Places library. Include the libraries=places
+		// parameter when you first load the API. For example:
+		// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+		
+		var map;
+		var infowindow;
+		
+		function initMap() {
+			var pyrmont = {lat: 28.614, lng: 77.312};
+			
+			map = new google.maps.Map(document.getElementById('map'), {
+				center: pyrmont,
+				zoom: 12
+			});
+			
+			infowindow = new google.maps.InfoWindow();
+			var service = new google.maps.places.PlacesService(map);
+			service.nearbySearch({
+				location: pyrmont,
+				radius: 15000,
+				type: ['stadium']
+			}, callback);
+		}
+		
+		function callback(results, status) {
+			if (status === google.maps.places.PlacesServiceStatus.OK) {
+				for (var i = 0; i < results.length; i++) {
+					createMarker(results[i]);
+				}
+			}
+		}
+		
+		function createMarker(place) {
+			var placeLoc = place.geometry.location;
+			var marker = new google.maps.Marker({
+				map: map,
+				position: place.geometry.location
+			});
+			
+			google.maps.event.addListener(marker, 'click', function() {
+				infowindow.setContent(place.name);
+				infowindow.open(map, this);
+			});
+		}
+  </script>
 
 </head>
 <body>
@@ -42,7 +102,7 @@
     
     <div class="sidebar-wrapper">
       <div class="logo">
-        <a href="/" class="simple-text">
+        <a hre class="simple-text">
           OORJA
         </a>
       </div>
@@ -66,22 +126,21 @@
             <p>News</p>
           </a>
         </li>
-  
         <li>
           <a href="fundGenerator.html">
             <i class="ti-money"></i>
             <p>Fund Generator</p>
           </a>
         </li>
-  
-  
+        
         <li>
           <a href="user.html">
             <i class="ti-user"></i>
             <p>User Profile</p>
           </a>
         </li>
-        <li class="active">
+        
+        <li>
           <a href="rules.html">
             <i class="ti-view-list-alt"></i>
             <p>Latest Rules</p>
@@ -95,7 +154,7 @@
           </a>
         </li>
         
-        <li>
+        <li class="active">
           <a href="googlePlaces.html">
             <i class="ti-location-pin"></i>
             <p>Stadiums Nearby</p>
@@ -115,38 +174,38 @@
             <span class="icon-bar bar2"></span>
             <span class="icon-bar bar3"></span>
           </button>
-          <a class="navbar-brand" href="#">Rules</a>
+          <a class="navbar-brand" href="#">Nearby Places</a>
           <div id="google_translate_element"></div>
           <script type="text/javascript">
-		        function googleTranslateElementInit() {
-			        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-		        }
+						function googleTranslateElementInit() {
+							new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+						}
           </script>
           <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+        
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li>
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <!--<i class="ti-panel"></i>
-                <p>Stats</p>-->
+<p>Stats</p>-->
               </a>
             </li>
             <!--<li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="ti-bell"></i>
-                <p class="notification">5</p>
-                <p>Notifications</p>
-                <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Notification 1</a></li>
-                <li><a href="#">Notification 2</a></li>
-                <li><a href="#">Notification 3</a></li>
-                <li><a href="#">Notification 4</a></li>
-                <li><a href="#">Another notification</a></li>
-              </ul>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="ti-bell"></i>
+                        <p class="notification">5</p>
+      <p>Notifications</p>
+      <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Notification 1</a></li>
+                    <li><a href="#">Notification 2</a></li>
+                    <li><a href="#">Notification 3</a></li>
+                    <li><a href="#">Notification 4</a></li>
+                    <li><a href="#">Another notification</a></li>
+                  </ul>
             </li>-->
             <li>
               <a href="#">
@@ -161,23 +220,8 @@
     </nav>
     
     
-    <div class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card">
-              <div class="header">
-                <h4 class="title">Latest ICC Rules</h4>
-                <p class="category">These are all the latest rules, fetched directly from the ICC website</p>
-              </div>
-              <div class="content table-responsive table-full-width" id="tableList">
-              
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+        <div id="map"></div>
+    
     
     <footer class="footer">
       <div class="container-fluid">
@@ -207,7 +251,6 @@
       </div>
     </footer>
   
-  
   </div>
 </div>
 
@@ -227,8 +270,6 @@
 <!--  Notifications Plugin    -->
 <script src="../assets/js/bootstrap-notify.js"></script>
 
-<!--  Google Maps Plugin    -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 
 <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
 <script src="../assets/js/paper-dashboard.js"></script>
@@ -236,8 +277,10 @@
 <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 <script src="../assets/js/demo.js"></script>
 
-<script src="../selfJS/rules.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJcyoAvk8sLA2hUbY1U_T98M2oDNC8cQQ&libraries=places&callback=initMap" async defer></script>
+
 <script>
-  $('#displayName').text(JSON.parse(localStorage.getItem('userData')).data.name)
+	$('#displayName').text(JSON.parse(localStorage.getItem('userData')).data.name);
+	$('#name').text(JSON.parse(localStorage.getItem('userData')).data.name);
 </script>
 </html>
