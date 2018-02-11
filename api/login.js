@@ -26,6 +26,7 @@ route.post('/signUp', (req,res) => {
 			password: req.body.password
 		})
 		.then(() => {
+			res.send({data:'done'});
 			console.log('User Created Successfully')
 		})
 		.catch((err) => console.log(err));

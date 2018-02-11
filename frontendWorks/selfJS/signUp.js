@@ -1,6 +1,7 @@
 $(document).ready(function () {
 	
-	$('#signUp').click( function () {
+	$('#signUp').click( function (e) {
+		console.log('fire');
 		let name = $('#name').val();
 		let email = $('#email').val();
 		let username = $('#username').val();
@@ -12,7 +13,8 @@ $(document).ready(function () {
 				email: email,
 				username: username,
 				password: password
-			}, () => {
+			}, (data) => {
+				window.location.href = '/login';
 				console.log('Data Sent for SignUp')
 			})
 		}
