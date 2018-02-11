@@ -6,7 +6,7 @@
   <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   
-  <title>News</title>
+  <title>Calender</title>
   
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
   <meta name="viewport" content="width=device-width" />
@@ -21,10 +21,8 @@
   <!--  Paper Dashboard core CSS    -->
   <link href="../assets/css/paper-dashboard.css" rel="stylesheet"/>
   
-  
   <!--  CSS for Demo Purpose, don't include it in your project     -->
   <link href="../assets/css/demo.css" rel="stylesheet" />
-  
   
   <!--  Fonts and icons     -->
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
@@ -44,7 +42,7 @@
     
     <div class="sidebar-wrapper">
       <div class="logo">
-        <a href="/" class="simple-text">
+        <a hre class="simple-text">
           OORJA
         </a>
       </div>
@@ -62,21 +60,18 @@
             <p>Form</p>
           </a>
         </li>
-        <li class="active">
+        <li>
           <a href="news.html">
             <i class="ti-bell"></i>
             <p>News</p>
           </a>
         </li>
-        
         <li>
           <a href="fundGenerator.html">
             <i class="ti-money"></i>
             <p>Fund Generator</p>
           </a>
         </li>
-  
-  
         <li>
           <a href="user.html">
             <i class="ti-user"></i>
@@ -89,7 +84,6 @@
             <p>Latest Rules</p>
           </a>
         </li>
-  
         <li>
           <a href="video.html">
             <i class="ti-video-camera"></i>
@@ -103,14 +97,12 @@
             <p>Stadiums Nearby</p>
           </a>
         </li>
-  
-        <li>
+        <li class="active">
           <a href="calender.html">
             <i class="ti-calendar"></i>
             <p>Calender</p>
           </a>
         </li>
-
 
       </ul>
     </div>
@@ -126,43 +118,43 @@
             <span class="icon-bar bar2"></span>
             <span class="icon-bar bar3"></span>
           </button>
-          <a class="navbar-brand" id="fetchNews">Fetch News</a>
+          <a class="navbar-brand" href="#">User Profile</a>
           <div id="google_translate_element"></div>
           <script type="text/javascript">
-		        function googleTranslateElementInit() {
-			        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-		        }
+						function googleTranslateElementInit() {
+							new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+						}
           </script>
           <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+        
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li>
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <!--<i class="ti-panel"></i>
-                <p>Stats</p>-->
+<p>Stats</p>-->
               </a>
             </li>
-           <!-- <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="ti-bell"></i>
-                <p class="notification">5</p>
-                <p>Notifications</p>
-                <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Notification 1</a></li>
-                <li><a href="#">Notification 2</a></li>
-                <li><a href="#">Notification 3</a></li>
-                <li><a href="#">Notification 4</a></li>
-                <li><a href="#">Another notification</a></li>
-              </ul>
+            <!--<li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="ti-bell"></i>
+                        <p class="notification">5</p>
+      <p>Notifications</p>
+      <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Notification 1</a></li>
+                    <li><a href="#">Notification 2</a></li>
+                    <li><a href="#">Notification 3</a></li>
+                    <li><a href="#">Notification 4</a></li>
+                    <li><a href="#">Another notification</a></li>
+                  </ul>
             </li>-->
             <li>
               <a href="#">
                 <i class="ti-user"></i>
-                <p id="displayName">Settings</p>
+                <p id="displayName"></p>
               </a>
             </li>
           </ul>
@@ -170,20 +162,44 @@
         </div>
       </div>
     </nav>
-    <div id="blog" class="light-wrapper">
-      <div style="font-weight:bold;font-size:23px;position: relative;top:40px;margin-bottom: 40px" class="text-center">DDCA</div>
-      <br>
-      <div class="container inner" id="newsList">
-      </div>
-      <div style="font-weight:bold;font-size:23px;position: relative;top:40px;margin-bottom: 40px" class="text-center">International News</div>
-        <br>
-        <div class="container inner" id="newsListCrickbuzz">
+    
+    
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <iframe src="https://teamup.com/ks7jq1qzu4jqpkwy98" frameborder="0" width="100%" height="700"></iframe>
         </div>
-      <!-- /.container -->
-    ><!-- #blog -->
-  
-  
-  
+      </div>
+    </div>
+    
+    
+    <footer class="footer">
+      <div class="container-fluid">
+        <nav class="pull-left">
+          <ul>
+            
+            <li>
+              <a href="http://www.creative-tim.com">
+                OORJA
+              </a>
+            </li>
+            <li>
+              <a href="http://blog.creative-tim.com">
+                Blog
+              </a>
+            </li>
+            <li>
+              <a href="http://www.creative-tim.com/license">
+                Licenses
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="copyright pull-right">
+          &copy; <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com">OORJA</a>
+        </div>
+      </div>
+    </footer>
   
   </div>
 </div>
@@ -212,27 +228,8 @@
 
 <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 <script src="../assets/js/demo.js"></script>
-
-<script src="../selfJS/news.js"></script>
-
-<script type="text/javascript">
-	
-	$(document).ready(function(){
-		
-		demo.initChartist();
-		
-		$.notify({
-			icon: 'ti-gift',
-			message: "Hey Generate Your Resume Now  "
-			
-		},{
-			type: 'success',
-			timer: 4000
-		});
-		
-	});
-</script>
 <script>
-  $('#displayName').text(JSON.parse(localStorage.getItem('userData')).data.name);
+	$('#displayName').text(JSON.parse(localStorage.getItem('userData')).data.name);
+	$('#name').text(JSON.parse(localStorage.getItem('userData')).data.name);
 </script>
 </html>
